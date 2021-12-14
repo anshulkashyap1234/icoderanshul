@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url(Ibiza\ Sunset.jpg);
+            background-position: center center;
+background-repeat: repeat-y;
+
+
+        }
+
+        #header {
+
+            display: flex;
+            background-color: aliceblue;
+            text-decoration: none;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+           
+            color: aliceblue;
+            border-width: 200px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            margin: 20px 20px;
+           
+            background: url(Vice\ City.jpg);
+            -webkit-background-clip: content-box;
+            background-position: 0 0;
+            animation: backed 15s linear infinite;
+        }@keyframes backed{
+            100%{
+                background-position: 2000px 0px;
+            }
+        }
+
+        #header li {
+            margin: 6px;
+            padding: 12px;
+
+        }
+        .lines:hover{
+          cursor: pointer;
+          color: darkgreen;
+           
+        }
+
+        #nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 600;
+           font-size: 12em;
+            flex-wrap: wrap;
+        }
+        #nav h2{
+            font-size: 90px;
+            line-height: 160px;
+            
+           
+
+            color: transparent;
+            -webkit-text-stroke: 1px #fff;
+            background: url(Cosmic\ Fusion.jpg);
+            -webkit-background-clip: text;
+            background-position: 0 0;
+            animation: back 20s linear infinite;
+        }
+        @keyframes back {
+            100%{
+                background-position: 2000px 0;
+            }
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+           
+            margin-top: px;
+            border-width: 120px;
+            border: solid black;
+            background-image: url(Cosmic\ Fusion.jpg);
+
+        }
+
+        #big {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex-flow: column;
+        }
+
+        #submit {
+            margin: 20px 20px;
+            top: 350px;
+            width: 60px;
+            height: 30px;
+        }#submit:hover{
+            color: rgb(46, 16, 212);
+            background-color: chocolate;
+        }
+
+        #text {
+            margin-right: 12px;
+            top: 200px;
+            font-size: 20px;
+            font-family: cursive;
+            font-weight: 300;
+
+        }
+
+      
+
+        .right {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            right: 10px;
+
+
+
+        }
+
+        #poem {
+            margin-top: 120px;
+
+            display: none;
+            border: 5px solid navy;
+            flex-wrap: wrap;
+            width: 620px;
+            height: 400px;
+            align-items: center;
+            justify-content: center;
+            background-image: url(patrick-tomasso-QMDap1TAu0g-unsplash.jpg);
+            background-position: center center;
+            background-size: cover;
+            color: rgb(231, 18, 89);
+            font-size: 37px;
+            border: 2px solid whitesmoke;
+        }
+
+        #inpoem {
+
+
+            width: 120px;
+            height: 40px;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+
+
+
+        }
+
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .input {
+            width: 220px;
+            height: 20px;
+            border: 2px solid black;
+            border-radius: 12px;
+        }
+        #demo{border: rgb(25, 73, 206) 2px solid;
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            display: flex;
+           background-color: transparent;
+           -webkit-background-clip: border-box;
+           background: url(Ibiza\ Sunset.jpg);
+           background-position: 0 0;
+           animation: para 10s linear infinite;
+            margin: 20px 20px;
+            
+        }
+        @keyframes para {
+            100%{
+                background-position: 2000px 0px;
+            }
+        }
+        #time{
+            display: flex;
+          justify-content: space-around;
+            margin: 20px 20px;
+            align-items: center;
+            flex-wrap: wrap;
+           
+            font-size: 49px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }#tamer{
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <header id="header">
+        <li   class="lines">home</li>
+      
+        <li  class="lines">menu</li>
+        <li  class="lines">help</li>
+        <li  class="lines">about</li>
+        <div class="right">
+            <button class="button" id="button1" onclick="login()">login</button>
+           
+        </div>
+    </header>
+    <span>
+
+        <div id="poem">
+            <div id="inpoem">
+                <h4>login</h6>
+                    <input type="text" class="input" placeholder="email id" id="email">
+                    <br>
+
+                    <input type="text" class="input " placeholder="password" id="password">
+
+                    <button onclick="submit()" id="submit2">submit</button>
+            </div>
+        </div>
+    </span>
+
+
+    <nav id="nav">
+        <h2>To know which year is leap</h5>
+    </nav>
+    <div id="big">
+
+        <div id="container">
+            <h6 id="text">enter the year</h6>
+            <br>
+
+            <input type="text" class="form-control" name="datepicker" id="datepicker" />
+            <br>
+
+            <button id="submit" onclick="plandrom()">submit </button>
+        </div>
+        <p id="demo"></p>
+        
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
+    <script>
+$(document).ready(function(){
+      $("#datepicker").datepicker({
+         format: "yyyy",
+         viewMode: "years", 
+         minViewMode: "years",
+         autoclose:true
+      });   
+    })
+        function login() {
+            let a = document.getElementById("button1");
+            let b = document.getElementById("poem");
+
+            if (b.style.display != 'none') {
+                b.style.display = 'none'
+
+            } else {
+                b.style.display = 'block'
+
+            }
+        }
+        function submit() {
+            let a = (document.getElementById("email")).value;
+            let d = (document.getElementById("password")).value;
+            let b = document.getElementById("poem");
+
+            if (b.style.display != 'none') {
+                b.style.display = 'none'
+
+            } else {
+                b.style.display = 'block'
+
+            }
+            confirm(a + d);
+
+
+
+        }
+        function plandrom() {
+            let a = (document.getElementById("datepicker")).value;
+            let y;
+            y=a;
+            var txt;
+            if (y % 4 == 0)
+  {
+    if (y % 100 == 0)
+    {
+      if (y % 400 == 0)
+      {
+        txt=" the year is a leap year";
+      }
+      else
+      {
+        txt=" the year is  not a leap year";
+      }
+    }
+    else
+    {
+        txt=" the year is a leap year";
+    }
+  }
+  else
+  {
+    txt=" the year is  not a leap year";
+  }
+            document.getElementById("demo").innerHTML = txt;
+        }
+       
+    </script>
+</body>
+
+</html>
